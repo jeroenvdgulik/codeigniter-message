@@ -34,7 +34,7 @@ $this->message->set('notice','this is just a notice');
 Set an array of messages
 
 `
- $data = array(
+$data = array(
   'message'=>'this is just a message',
   'notice'=>'this is just a notice'
 );
@@ -43,21 +43,25 @@ $this->message->set($data);
 `
 
 Return all messages
+
 `
 $messages = $this->message->get();
 `
 
 Return a group of messages
+
 `
 $messages = $this->message->get('notice');
 `
 
 Show all messages
+
 `
 echo $this->message->display();
 `
 
 Show a group of messages
+
 `
 echo $this->message->display('notice');
 `
@@ -72,11 +76,12 @@ $this->message->set('notice','this is just a notice');
 
 will autoload the file views/message_folder_name/notice_view.php
 The basic layout for any view looks like this:
+
 `
 foreach ($messages as $message):
   echo $message;
- endforeach;
- `
+endforeach;
+`
 		
 This gives you freedom to style any message any way you want from within a view.
 
