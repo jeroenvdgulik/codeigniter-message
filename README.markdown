@@ -1,7 +1,8 @@
 CodeIgniter-Message
 ================
 
-CodeIgniter-Message is a small codeigniter library for giving feedback to the user 
+CodeIgniter-Message is a small codeigniter library for giving feedback to the user. 
+
 
 Configuration
 -------------
@@ -77,6 +78,16 @@ The basic layout for any view looks like this:
 	endforeach;
 		
 This gives you freedom to style any message any way you want from within a view.
+
+Installation
+-----
+
+Drop the libraries/Message.php file into your application/libraries folder.
+
+Requirements
+-----
+
+Only CodeIgniter
 
 Extra
 -----
