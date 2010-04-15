@@ -6,11 +6,12 @@ CodeIgniter-Message is a small codeigniter library for giving feedback to the us
 Configuration
 -------------
 
-`
-// what you would like to wrap your individual messages with
-$config['message_prefix'] = '<p>';
-$config['message_suffix'] = '</p>';
+what you would like to wrap your individual messages with
 
+	$config['message_prefix'] = '<p>';
+	$config['message_suffix'] = '</p>';
+
+`
 // what you would like the container to be of your messages
 $config['wrapper_prefix'] = '<div class="message">';
 $config['wrapper_suffix'] = '</div>';
@@ -35,8 +36,11 @@ Set an array of messages
 
 `
 $data = array(
+
   'message'=>'this is just a message',
+  
   'notice'=>'this is just a notice'
+  
 );
 
 $this->message->set($data);
@@ -79,7 +83,9 @@ The basic layout for any view looks like this:
 
 `
 foreach ($messages as $message):
+
   echo $message;
+  
 endforeach;
 `
 		
