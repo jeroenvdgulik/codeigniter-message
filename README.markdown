@@ -6,6 +6,13 @@ CodeIgniter-Message is a small codeigniter library for giving feedback to the us
 Configuration
 -------------
 
+All configuration is optional. It gives you a handy way of setting default values for 
+your message container, the html element you want to wrap your individual messages with, 
+a default view to load your message in, or load a specific view based on a certain 
+message group. If the configuration file is not present nor any views are present, the 
+message library will just output the message without any markup. This might be preferable
+when passing messages to javascript plugins, like Growl.
+
 what you would like to wrap your individual messages with
 
 	$config['message_prefix'] = '<p>';
@@ -16,7 +23,7 @@ what you would like the container to be of your messages
 	$config['wrapper_prefix'] = '<div class="message">';
 	$config['wrapper_suffix'] = '</div>';
 
-the folder to search for partial views
+the folder to search for partial views with trailing slash
 	
 	$config['message_folder'] = 'messages/';
 
