@@ -41,8 +41,8 @@ Set a message
 Set an array of messages
 
 	$data = array(
-		 		message'=>'this is just a message',
-		  		notice'=>'this is just a notice'
+		 		'message'=>'this is just a message',
+		  		'notice'=>'this is just a notice'
  			);
 
 	$this->message->set($data);
