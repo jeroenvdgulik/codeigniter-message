@@ -22,7 +22,7 @@ class CI_Message {
 	private $message_folder	= '';
 	private $message_view	= '';
 	private $wrapper_prefix	= '';
-	private $wrapper_suffix = '';
+	private $wrapper_suffix	= '';
 
 	/**
 	 * Message Constructor
@@ -33,10 +33,10 @@ class CI_Message {
 	 */
 	function CI_Message($config = array())
 	{
-        $this->CI =& get_instance();
-        $this->CI->load->library('session');
+		$this->CI =& get_instance();
+		$this->CI->load->library('session');
 
-        if ($this->CI->session->userdata('_messages'))
+		if ($this->CI->session->userdata('_messages'))
 		{
 			$this->messages = $this->CI->session->userdata('_messages');
 		}
@@ -100,9 +100,9 @@ class CI_Message {
 	 * @param	string	the group you want to fetch
 	 * @return	mixed
 	 */
-    function get($group = FALSE)
+	function get($group = FALSE)
 	{
-        // do we have something to show?
+		// do we have something to show?
 		if (count($this->messages) == 0) return FALSE;
 
 		// was a group set? else we return everything
@@ -115,7 +115,7 @@ class CI_Message {
 		{
 			return $this->messages;
 		}
-    }
+	}
 
 	/**
 	 * Outputs all or a group of "messages"
@@ -124,7 +124,7 @@ class CI_Message {
 	 * @param	string	the group you want to output
 	 * @return	string
 	 */
-    function display($group = FALSE)
+	function display($group = FALSE)
 	{
 		// do we have something to show?
 		if (($messages = $this->get($group)) === FALSE) return FALSE;
@@ -136,7 +136,7 @@ class CI_Message {
 		$this->CI->session->unset_userdata('_messages');
 
 		return $output;
-    }
+	}
 
 	/**
 	 * Formats the output
@@ -153,7 +153,7 @@ class CI_Message {
 		foreach ($this->messages as $group => $messages)
 		{
 			// was a group set? if so skip all groups that do not match
-			if ($by_group === TRUE && $group != $by_group) continue;
+			if ($by_group !== FALSE && $group != $by_group) continue;
 
 			// does a view partial exist?
 			if (file_exists(APPPATH.'views/'.$this->message_folder.$group.'_view'.EXT))
