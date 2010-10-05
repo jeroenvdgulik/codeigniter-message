@@ -86,6 +86,9 @@ class CI_Message {
 		{
 			foreach ($newdata as $group => $value)
 			{
+				// Let's skip empty messages
+				if (empty($value)) continue;
+				
 				$this->messages[$group][] = $value;
 			}
 
