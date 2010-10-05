@@ -10,7 +10,7 @@
  * @subpackage	Libraries
  * @category	Message
  * @author		Jeroen v.d Gulik
- * @version		1.0
+ * @version		1.2
  */
 
 class CI_Message {
@@ -166,7 +166,7 @@ class CI_Message {
 			// does a default view partial exist?
 			elseif (file_exists(APPPATH.'views/'.$this->message_folder.$this->message_view.'_view'.EXT))
 			{
-				$output .= $this->CI->load->view($this->message_folder.$this->message_view, array('messages'=>$messages), TRUE);
+				$output .= $this->CI->load->view($this->message_folder.$this->message_view.'_view', array('messages'=>$messages), TRUE);
 			}
 			// fallback to default values (possibly set by config)
 			else
