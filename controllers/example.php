@@ -5,8 +5,8 @@ class Example extends Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->helper('url');
-		$this->load->library('message');
+		$this->load->helper(array('url'));
+		$this->load->library(array('message'));
 	}
 	
 	function index()
